@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-Page Background Video */
+.start {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* Header Styling */
+header {
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.96);
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+
+nav {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    color: #f50000e2;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* Main Content */
+.content {
+    padding-top: 100px; /* Adjusted for fixed header */
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Titles with Animations */
+.access {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    animation: fade-in 2s ease-out forwards;
+    font-family: 'Arial', sans-serif;
+}
+.this{
+    color:rgba(255, 255, 255, 0.503);
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    animation: fade-in 2s ease-out forwards;
+
+
+}
+
+.access {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.this {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+/* Box Container: Left and Right Positioning */
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between boxes */
+    margin-top: 90px;
+}
+
+/* Box Styling (for both Access and Submit) */
+.box, .box2 {
+    position: relative;
+    width: 280px;
+    height: 170px;
+    background-color: #1c1c29;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slide-in 0.8s ease-out forwards;
+}
+
+/* Styling for the second box */
+.box2 {
+    background-color: #262636;
+}
+
+/* Hover Effects for Boxes */
+.box:hover, .box2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    animation: bounce 0.5s ease-out;  /* Adding bounce effect on hover */
+}
+
+/* Titles inside Boxes */
+.box h2, .box2 h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.box img, .box2 img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Footer Information */
+.box3 {
+
+    color: #f5b300;
+    font-size: 18px;
+    margin-top: 120px;
+    animation: fade-in 2s ease-out forwards;
+    position: relative;
+    z-index: 1;
+}
+
+/* Instagram Icon (Now placed right after Chetan VIT27) */
+.insta-link {
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:5px;  /* No gap */
+    animation: bounce 1.5s infinite;
+}
+
+.insta-link img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.insta-link img:hover {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .access, .this {
+        font-size: 40px;
+    }
+
+    .box, .box2 {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .box-container {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+        gap: 20px;
+    }
+
+    .insta-link img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+
+
+
